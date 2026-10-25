@@ -1,9 +1,5 @@
-// =========================================
-// THEME MANAGER (Dark / Light Mode with Storage)
-// =========================================
 const themeToggle = document.getElementById('theme-toggle');
 
-// Determine initial theme: stored preference -> system preference -> default to dark
 function getInitialTheme() {
     const savedTheme = localStorage.getItem('wk_theme');
     if (savedTheme) {
@@ -31,9 +27,7 @@ function applyTheme(theme) {
     localStorage.setItem('wk_theme', theme);
 }
 
-// Initialize theme on load
-const currentTheme = getInitialTheme();
-applyTheme(currentTheme);
+applyTheme(getInitialTheme());
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -42,9 +36,35 @@ if (themeToggle) {
     });
 }
 
-// =========================================
-// ACTIVE NAVIGATION HIGHLIGHT (SCROLL SPY)
-// =========================================
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.innerHTML = isOpen 
+            ? '<i class="fa-solid fa-xmark"></i>' 
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('open')) {
+            navMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+    });
+}
+
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
@@ -70,9 +90,170 @@ if (sections.length > 0 && navLinks.length > 0) {
     }, { passive: true });
 }
 
-// =========================================
-// CONTACT FORM HANDLER
-// =========================================
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 350) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+const appDetails = {
+    tasbih: {
+        title: 'Digital Tasbih',
+        subtitle: 'Distraction-free Android Dhikr & Tasbih Counter',
+        logo: 'Images/Digi_Tasbih_logo.webp',
+        version: 'v1.1',
+        size: '15.3 MB',
+        android: 'Android 8.0+',
+        license: 'Free / No Ads',
+        description: 'A clean, lightweight Android application designed for mindful daily Ibadat. Built with battery efficiency, offline durability, and zero distractions in mind.',
+        features: [
+            'Persistent state: Count never resets unexpectedly across restarts or app switches',
+            'Tactile haptic feedback: Subtle vibration cues for counting without looking at the screen',
+            'OLED Dark Mode: Optimized dark aesthetic to conserve battery during extended sessions',
+            'Privacy first: 100% offline functionality with zero analytics or internet permissions required'
+        ],
+        downloadUrl: 'APKs/Digi%20Tasbih.apk',
+        filename: 'Digital_Tasbih.apk'
+    },
+    motometrics: {
+        title: 'MotoMetrics',
+        subtitle: 'Automotive Fuel Economy & EV Trip Companion',
+        logo: 'Images/MotoMetrics_logo.webp',
+        version: 'v1.0',
+        size: '8.4 MB',
+        android: 'Android 8.0+',
+        license: 'Free / Utility',
+        description: 'An intuitive automotive companion app tailored for modern drivers. Calculate real-time fuel efficiency, electric vehicle kWh consumption, and total journey travel costs with precision.',
+        features: [
+            'Dual fuel & EV calculator: Seamlessly compare combustion mileage with electric kWh range',
+            'Trip expense projection: Accurate cost breakdowns based on customizable fuel and toll rates',
+            'Local logbook: Store previous trip logs securely on your device without signing up',
+            'High-contrast dashboard: Clear, distraction-free interface engineered for glanceability'
+        ],
+        downloadUrl: 'APKs/MotoMetrics.apk',
+        filename: 'MotoMetrics.apk'
+    }
+};
+
+const appModal = document.getElementById('app-modal');
+const modalBody = document.getElementById('modal-body');
+const modalClose = document.getElementById('modal-close');
+
+function openAppModal(appKey) {
+    const data = appDetails[appKey];
+    if (!data || !appModal || !modalBody) return;
+
+    modalBody.innerHTML = `
+        <div class="modal-header-meta">
+            <img src="${data.logo}" alt="${data.title} icon" class="modal-app-logo" width="56" height="56">
+            <div class="modal-title">
+                <h3>${data.title}</h3>
+                <p>${data.subtitle}</p>
+            </div>
+        </div>
+
+        <p class="description" style="margin-bottom: 16px;">${data.description}</p>
+
+        <div class="modal-specs">
+            <div class="spec-item">
+                <small>Package Size</small>
+                <span>${data.size}</span>
+            </div>
+            <div class="spec-item">
+                <small>Requirement</small>
+                <span>${data.android}</span>
+            </div>
+            <div class="spec-item">
+                <small>License</small>
+                <span>${data.license}</span>
+            </div>
+        </div>
+
+        <h4 class="modal-section-title">Key Highlights</h4>
+        <ul class="modal-features">
+            ${data.features.map(f => `<li><i class="fa-solid fa-circle-check"></i> <span>${f}</span></li>`).join('')}
+        </ul>
+
+        <div class="modal-actions">
+            <a href="${data.downloadUrl}" download="${data.filename}" class="btn-primary">
+                <i class="fa-solid fa-download"></i> Download APK (${data.version})
+            </a>
+            <button type="button" class="btn-secondary" onclick="closeAppModal()">Close</button>
+        </div>
+    `;
+
+    appModal.classList.add('active');
+    appModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeAppModal() {
+    if (!appModal) return;
+    appModal.classList.remove('active');
+    appModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-app]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        openAppModal(btn.getAttribute('data-app'));
+    });
+});
+
+if (modalClose) {
+    modalClose.addEventListener('click', closeAppModal);
+}
+
+if (appModal) {
+    appModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-backdrop')) {
+            closeAppModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && appModal.classList.contains('active')) {
+            closeAppModal();
+        }
+    });
+}
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.works-grid .work-card[data-category]');
+
+if (filterButtons.length > 0 && projectCards.length > 0) {
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
 const contactForm = document.getElementById('form');
 const formStatus = document.getElementById('form-status');
 
@@ -89,7 +270,6 @@ if (contactForm) {
         const email = emailInput ? emailInput.value.trim() : '';
         const message = messageInput ? messageInput.value.trim() : '';
 
-        // Check for Web3Forms access key
         const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
         const hasCustomAccessKey = accessKeyInput && 
                                    accessKeyInput.value && 
@@ -100,7 +280,6 @@ if (contactForm) {
             formStatus.style.display = 'none';
         }
 
-       
         if (hasCustomAccessKey) {
             if (submitBtn) {
                 submitBtn.disabled = true;
@@ -131,7 +310,6 @@ if (contactForm) {
                 }
             }
         } else {
-            
             showFormStatus('Opening your default email app to send message...', 'info');
             openMailClient(name, email, message);
             contactForm.reset();
@@ -155,9 +333,6 @@ function showFormStatus(text, type) {
     formStatus.style.display = 'block';
 }
 
-// =========================================
-// SCROLL REVEAL ANIMATIONS
-// =========================================
 const revealElements = document.querySelectorAll('.reveal');
 
 if (revealElements.length > 0 && 'IntersectionObserver' in window) {
@@ -165,7 +340,7 @@ if (revealElements.length > 0 && 'IntersectionObserver' in window) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                obs.unobserve(entry.target); // Unobserve once animated for better performance
+                obs.unobserve(entry.target);
             }
         });
     }, {
@@ -175,6 +350,5 @@ if (revealElements.length > 0 && 'IntersectionObserver' in window) {
 
     revealElements.forEach((el) => observer.observe(el));
 } else {
-    // Fallback if IntersectionObserver is not supported
     revealElements.forEach((el) => el.classList.add('active'));
 }

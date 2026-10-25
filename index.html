@@ -12,34 +12,41 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wasif Khan | Software Engineer & Developer Portfolio">
     <meta property="og:description" content="Computer Science student passionate about building dynamic web and mobile applications.">
-    <meta property="og:image" content="wasif_FP.png">
+    <meta property="og:image" content="Images/wasif_FP.webp">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Wasif Khan | Portfolio">
     <meta name="twitter:description" content="Computer Science student passionate about building dynamic web and mobile applications.">
-    <meta name="twitter:image" content="wasif_FP.png">
+    <meta name="twitter:image" content="Images/wasif_FP.webp">
 
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='45' fill='white'>WK</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- HEADER / NAVIGATION -->
     <header>
         <a href="#home" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
-        <nav aria-label="Main Navigation">
-            <a href="#home" class="active">Home</a>
-            <a href="#works">Works</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <button id="theme-toggle" aria-label="Toggle dark/light theme">
-                <i class="fa-regular fa-sun"></i>
-            </button>
-        </nav>
+        <div class="header-right">
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#works">Works</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
+        <!-- Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-content">
                 <p class="greeting">HI, I’M</p>
@@ -51,18 +58,18 @@
                 <div class="hero-buttons">
                     <a href="#works" class="btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="#contact" class="btn-secondary">Contact Me</a>
+                    <a href="Resume/WK_Resume.pdf" class="btn-secondary">
+                        <i class="fa-solid fa-file-arrow-down"></i> Resume
+                    </a>
                 </div>
 
                 <div class="social-icons">
-                    <!-- GitHUb -->
                     <a href="https://github.com/wasifahmedkhan1-web" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/wasif-ahmed-khan-42736443b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/wasif.khan2007?obrf=cGVhc2Q5YnM0ajBz" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
@@ -71,7 +78,7 @@
 
             <div class="hero-visual">
                 <div class="profile-card">
-                    <img src="Images\wasif_FP.webp" alt="Wasif Khan profile photo" width="270" height="330">
+                    <img src="Images/wasif_FP.webp" alt="Wasif Khan profile photo" width="270" height="330">
                 </div>
                 <div class="quote-box">
                     <p>“Better Code<br>Bigger Dreams”</p>
@@ -92,7 +99,7 @@
             </div>
         </section>
 
-        <!-- WORKS SECTION -->
+        <!-- Works Section -->
         <section id="works" class="works-section">
             <div class="works-header">
                 <span class="line"></span>
@@ -116,10 +123,15 @@
                         <span class="tag">Java</span>
                         <span class="tag">Mobile UI</span>
                     </div>
-                    <a href="APKs\Digi Tasbih.apk" download="Digital_Tasbih.apk" class="btn-secondary btn-small">
-                        <i class="fa-solid fa-download"></i> Download APK
-                    </a>
-                    <span class="apk-notice"><i class="fa-solid fa-circle-info"></i> Direct Android package (.apk)</span>
+                    <div class="card-actions">
+                        <a href="APKs/Digi%20Tasbih.apk" download="Digital_Tasbih.apk" class="btn-secondary btn-small">
+                            <i class="fa-solid fa-download"></i> Download APK
+                        </a>
+                        <button type="button" class="btn-link" data-app="tasbih">
+                            <i class="fa-solid fa-circle-info"></i> Preview & Info
+                        </button>
+                    </div>
+                    <span class="apk-notice"><i class="fa-solid fa-circle-info"></i> Direct Android package (.apk) &bull; Verified safe</span>
                 </div>
 
                 <!-- Project 2: MotoMetrics -->
@@ -138,10 +150,15 @@
                         <span class="tag">Analytics</span>
                         <span class="tag">Utility</span>
                     </div>
-                    <a href="APKs/MotoMetrics.apk" download="MotoMetrics.apk" class="btn-secondary btn-small">
-                        <i class="fa-solid fa-download"></i> Download APK
-                    </a>
-                    <span class="apk-notice"><i class="fa-solid fa-circle-info"></i> Direct Android package (.apk)</span>
+                    <div class="card-actions">
+                        <a href="APKs/MotoMetrics.apk" download="MotoMetrics.apk" class="btn-secondary btn-small">
+                            <i class="fa-solid fa-download"></i> Download APK
+                        </a>
+                        <button type="button" class="btn-link" data-app="motometrics">
+                            <i class="fa-solid fa-circle-info"></i> Preview & Info
+                        </button>
+                    </div>
+                    <span class="apk-notice"><i class="fa-solid fa-circle-info"></i> Direct Android package (.apk) &bull; Verified safe</span>
                 </div>
                 
                 <!-- Project 3: Web Projects -->
@@ -149,24 +166,26 @@
                     <div class="card-header">
                         <i class="fa-solid fa-globe work-icon"></i>
                         <div class="app-meta">
-                            <span class="version">Live</span>
+                            <span class="version">Directory</span>
                         </div>
                     </div>
-                    <h3>Web Projects</h3>
-                    <p>A curated directory of responsive web applications, scripts, and front-end utilities developed and deployed online.</p>
+                    <h3>Web & Software Projects</h3>
+                    <p>A curated directory of responsive web applications, scripts, CLI tools, and algorithms developed and deployed online.</p>
                     <div class="tech-tags">
                         <span class="tag">HTML5 / CSS3</span>
                         <span class="tag">JavaScript</span>
-                        <span class="tag">Responsive</span>
+                        <span class="tag">Python</span>
                     </div>
-                    <a href="projects.html" class="btn-secondary btn-small">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Explore Projects
-                    </a>
+                    <div class="card-actions">
+                        <a href="projects.html" class="btn-secondary btn-small">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Explore Projects
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- About Section -->
         <section id="about" class="about-section">
             <div class="about-header">
                 <span class="line"></span>
@@ -224,7 +243,7 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
+        <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="contact-header">
                 <span class="line"></span>
@@ -266,7 +285,6 @@
 
                 <div class="contact-form-card reveal" id="contact-form">
                     <form id="form">
-                    
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         
                         <input type="text" name="name" id="name" placeholder="Your Name" required autocomplete="name" aria-label="Your Name">
@@ -281,7 +299,20 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- App Details Modal -->
+    <div id="app-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <footer>
         <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
         <div class="footer-links">
