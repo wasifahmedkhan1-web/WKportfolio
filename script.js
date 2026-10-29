@@ -110,6 +110,24 @@ if (backToTopBtn) {
 }
 
 const appDetails = {
+    navixo: {
+        title: 'Navixo',
+        subtitle: 'Real-Time Location Sharing & Circle Safety Companion',
+        logo: 'Images/Navixo_logo.webp',
+        version: 'v1.0',
+        size: '23.3 MB',
+        android: 'Android 8.0+',
+        license: 'Free / Privacy-First',
+        description: 'A modern, battery-optimized location coordination app designed for families and group travel with OpenStreetMap, foreground GPS tracking, and incognito privacy controls.',
+        features: [
+            'Precision live location streaming with background Android foreground services',
+            'Incognito & Ghost Mode: Fuzz exact radius or pause reporting with one tap',
+            'Auto-expiring session links to share with friends without permanent access',
+            'Zero proprietary vendor lock-in with open-source OpenStreetMap integration'
+        ],
+        downloadUrl: 'APKs/Navixo.apk',
+        filename: 'Navixo.apk'
+    },
     tasbih: {
         title: 'Digital Tasbih',
         subtitle: 'Distraction-free Android Dhikr & Tasbih Counter',

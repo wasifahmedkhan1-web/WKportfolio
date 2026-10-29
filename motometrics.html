@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoMetrics | Automotive Fuel & EV Analytics App by Wasif Khan</title>
+    
+    <meta name="description" content="MotoMetrics is an intuitive Android companion app built with Kotlin & Jetpack Compose to track vehicle fuel economy, EV battery consumption, and trip expenses.">
+    <meta name="author" content="Wasif Khan">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MotoMetrics | Automotive Fuel & EV Analytics">
+    <meta property="og:description" content="Smart automotive analytics app built to monitor fuel economy, calculate EV charge consumption, and project journey expenses seamlessly.">
+    <meta property="og:image" content="Images/MotoMetrics_logo.webp">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='45' fill='white'>WK</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
+        <div class="header-right">
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#works" class="active">Works</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="app-detail-header">
+            <a href="index.html#works" class="breadcrumb-nav">
+                <i class="fa-solid fa-arrow-left"></i> Back to Works
+            </a>
+
+            <!-- App Hero Card -->
+            <div class="app-hero-card">
+                <img src="Images/MotoMetrics_logo.webp" alt="MotoMetrics Application Icon" class="app-hero-logo" width="96" height="96">
+                
+                <div class="app-hero-info">
+                    <h1>MotoMetrics</h1>
+                    <p class="app-tagline">Automotive Fuel Economy, EV Range & Maintanance Record Manager</p>
+                    
+                    <div class="app-badge-row">
+                        <span class="badge-pill accent"><i class="fa-solid fa-code-commit"></i> v1.0.0</span>
+                        <span class="badge-pill success"><i class="fa-solid fa-charging-station"></i> Fuel & EV Ready</span>
+                        <span class="badge-pill"><i class="fa-solid fa-calendar-day"></i> Nov 2026</span>
+                        <span class="badge-pill"><i class="fa-brands fa-android"></i> Android 8.0+</span>
+                    </div>
+                </div>
+
+                <div class="app-hero-actions">
+                    <a href="APKs/MotoMetrics.apk" download="MotoMetrics.apk" class="btn-primary">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
+                    <span class="direct-apk-note">
+                        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> 8.8 MB &bull; Signed & Safe
+                    </span>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="app-metrics-bar">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="metric-content">
+                        <small>Time to Build</small>
+                        <strong>2 to 3 Weeks</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="metric-content">
+                        <small>UI Architecture</small>
+                        <strong>Jetpack Compose</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-database"></i></div>
+                    <div class="metric-content">
+                        <small>Storage</small>
+                        <strong>Local Storage</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-box-archive"></i></div>
+                    <div class="metric-content">
+                        <small>Package Size</small>
+                        <strong>8.8 MB APK</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Body Layout -->
+            <div class="app-body-layout">
+                <div class="app-content-column">
+                    <!-- About Section -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-circle-info"></i> About MotoMetrics
+                        </h2>
+                        <p class="section-paragraph">
+                            MotoMetrics is a completely offline app designed to seamlessly track and manage both ICE and EV vehicles. It allows you to easily log your fuel usage, EV charging sessions, and maintenance records, as well as track upcoming service reminders. The app features a dedicated savings dashboard to compare energy costs and analyze your total savings. With native Light and Dark modes, all of your data is securely stored 100% locally on your device, ensuring your vehicle metrics remain entirely private.
+                        </p>
+                    </div>
+
+                    <!-- Interface Showcase -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
+                        </h2>
+
+                        <div class="screenshot-gallery">
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/MotoMetrics/MotoMetricsSS1.webp" alt="MotoMetrics Mileage Dashboard Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">My Garage</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/MotoMetrics/MotoMetricsSS2.webp" alt="MotoMetrics Trip Cost Calculator Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">EV Charging Dashboard</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/MotoMetrics/MotoMetricsSS3.webp" alt="MotoMetrics Service Logbook Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Profile Tab</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-layer-group"></i> Frameworks & Technologies
+                        </h2>
+                        
+                        <div class="tech-stack-grid">
+                            <div class="tech-card">
+                                <i class="fa-brands fa-android tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Kotlin</strong>
+                                    <small>Robust type safety and clean data classes for mathematical calculations.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-cubes tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Jetpack Compose</strong>
+                                    <small>Fluid reactive UI components, animated cards, and responsive input forms.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-database tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Local Storage</strong>
+                                    <small>Fast, structured offline relational storage for vehicle logs and fuel entries.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Features -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-star"></i> Core Features
+                        </h2>
+                        
+                        <div class="features-grid">
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-gas-pump"></i></div>
+                                <h4>Dual ICE & EV Tracking</h4>
+                                <p>Monitor liters and gallons for petrol/diesel vehicles, or kilowatt-hours (kWh) for modern electric cars.</p>
+                            </div>
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-wrench"></i></div>
+                                <h4>Maintenance Record</h4>
+                                <p>Track Odometer reading for oil change, Brake Pad</p>
+                            </div>
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                                <h4>100% Offline & Private</h4>
+                                <p>All data stays securely in local device storage without mandatory account creation or cloud dependencies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="app-sidebar-column">
+                    <!-- Specs Table -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-sliders"></i> Technical Specs
+                        </h3>
+                        
+                        <div class="specs-table">
+                            <div class="specs-row">
+                                <span class="spec-label">Package Name</span>
+                                <span class="spec-val">dev.wasif.motmetrics</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Version</span>
+                                <span class="spec-val">1.0.0</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Package Size</span>
+                                <span class="spec-val">8.8 MB</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Minimum Android</span>
+                                <span class="spec-val">Android 8.0 (API 26)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">License</span>
+                                <span class="spec-val">Free Utility</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Developer</span>
+                                <span class="spec-val">Mr. Wasif Ahmed Khan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Installation Guide -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-download"></i> Installation Guide
+                        </h3>
+                        
+                        <div class="install-step-list">
+                            <div class="install-step">
+                                <div class="step-num">1</div>
+                                <div class="step-text">
+                                    <strong>Download MotoMetrics.apk</strong>
+                                    <p>Tap the download button to save the APK to your Android device.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">2</div>
+                                <div class="step-text">
+                                    <strong>Confirm Installation</strong>
+                                    <p>Tap the downloaded file and allow installation from your browser if prompted.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">3</div>
+                                <div class="step-text">
+                                    <strong>Add Your First Vehicle</strong>
+                                    <p>Launch the app, create your car or motorcycle profile, and log your odometer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Timeline -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Sprint Timeline
+                        </h3>
+                        <p class="section-paragraph" style="font-size: 0.9rem;">
+                            <strong>Total Development:</strong> ~2 to 3 Weeks<br>
+                            &bull; <strong>Week 1:</strong> Data model design (FuelLog, ChargeLog, Vehicle)<br>
+                            &bull; <strong>Week 2:</strong> Jetpack Compose UI architecture & expense calculation formulas<br>
+                            &bull; <strong>Week 3:</strong> Night mode UI tuning, and APK release
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="app-cta-banner">
+            <h3>Take Control of Your Driving Costs</h3>
+            <p>Download MotoMetrics now and calculate your fuel mileage, EV battery performance.</p>
+            <div class="app-cta-buttons">
+                <a href="APKs/MotoMetrics.apk" download="MotoMetrics.apk" class="btn-primary">
+                    <i class="fa-solid fa-download"></i> Download MotoMetrics APK (8.8 MB)
+                </a>
+                <a href="index.html#works" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Explore Other Apps
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
+        <div class="footer-links">
+            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

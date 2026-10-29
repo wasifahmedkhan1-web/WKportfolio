@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbih | Distraction-Free Dhikr App by Wasif Khan</title>
+    
+    <meta name="description" content="Digital Tasbih is an ad-free, distraction-free Android application designed for persistent daily Ibadat counting with tactile haptic feedback.">
+    <meta name="author" content="Wasif Khan">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Digital Tasbih | Distraction-Free Android App">
+    <meta property="og:description" content="A distraction-free Digital Tasbih designed for daily Ibadat with persistent counting, tactile haptic feedback, and AMOLED dark mode.">
+    <meta property="og:image" content="Images/Digi_Tasbih_logo.webp">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='45' fill='white'>WK</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
+        <div class="header-right">
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#works" class="active">Works</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="app-detail-header">
+            <a href="index.html#works" class="breadcrumb-nav">
+                <i class="fa-solid fa-arrow-left"></i> Back to Works
+            </a>
+
+            <!-- App Hero Card -->
+            <div class="app-hero-card">
+                <img src="Images/Digi_Tasbih_logo.webp" alt="Digital Tasbih Application Icon" class="app-hero-logo" width="96" height="96">
+                
+                <div class="app-hero-info">
+                    <h1>Digital Tasbih</h1>
+                    <p class="app-tagline">Distraction-Free Daily Dhikr & Persistent Ibadat Counter</p>
+                    
+                    <div class="app-badge-row">
+                        <span class="badge-pill accent"><i class="fa-solid fa-code-commit"></i> v1.1.0</span>
+                        <span class="badge-pill success"><i class="fa-solid fa-ban"></i> 100% Ad-Free</span>
+                        <span class="badge-pill"><i class="fa-brands fa-android"></i> Android 8.0+</span>
+                    </div>
+                </div>
+
+                <div class="app-hero-actions">
+                    <a href="APKs/Digi%20Tasbih.apk" download="Digital_Tasbih.apk" class="btn-primary">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>    
+                    <span class="direct-apk-note">
+                        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> 16.0 MB &bull; Signed & Safe
+                    </span>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="app-metrics-bar">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="metric-content">
+                        <small>Time to Build</small>
+                        <strong>1 or 2 Days</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-moon"></i></div>
+                    <div class="metric-content">
+                        <small>Display Design</small>
+                        <strong>Kabba Picture</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-hard-drive"></i></div>
+                    <div class="metric-content">
+                        <small>Type</small>
+                        <strong>Simple Application</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-box-archive"></i></div>
+                    <div class="metric-content">
+                        <small>Package Size</small>
+                        <strong>16.0 MB APK</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Body Layout -->
+            <div class="app-body-layout">
+                <div class="app-content-column">
+                    <!-- About Section -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-circle-info"></i> About Digital Tasbih
+                        </h2>
+                        <p class="section-paragraph">
+                            Digital Tasbih is a custom-built digital counter app designed to assist with daily dhikr. It features a simple, intuitive interface with a large "Count" button for tracking repetitions and a quick "Reset" option, beautifully overlaid on an inspiring background of Mecca.
+                        </p>
+                        <p class="section-paragraph">
+                            Developed by Wasif, it serves as both a practical spiritual utility and a clean, functional showcase of mobile UI design.
+                        </p>
+                    </div>
+
+                    <!-- Interface Showcase -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
+                        </h2>
+
+                        <div class="screenshot-gallery">
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/DigiTasbih/DigiTasbihSS1.webp" alt="Digital Tasbih AMOLED Counter Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Zero Screen</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/DigiTasbih/DigiTasbihSS2.webp" alt="Digital Tasbih Sensory Controls Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Counting</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-layer-group"></i> Frameworks & Technologies
+                        </h2>
+                        
+                        <div class="tech-stack-grid">
+                            <div class="tech-card">
+                                <i class="fa-brands fa-android tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Native Android</strong>
+                                    <small>Built with native Android SDK for instant response and zero frame drops.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="app-sidebar-column">
+                    <!-- Specs Table -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-sliders"></i> Technical Specs
+                        </h3>
+                        
+                        <div class="specs-table">
+                            <div class="specs-row">
+                                <span class="spec-label">Package Name</span>
+                                <span class="spec-val">dev.wasif.digitasbih</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Version</span>
+                                <span class="spec-val">1.1.0</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Package Size</span>
+                                <span class="spec-val">16.0 MB</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Minimum Android</span>
+                                <span class="spec-val">Android 8.0 (API 26)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Internet Required</span>
+                                <span class="spec-val">No (100% Offline)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">License</span>
+                                <span class="spec-val">Free Utility</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Developer</span>
+                                <span class="spec-val">Mr. Wasif Ahmed Khan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Installation Guide -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-download"></i> Installation Guide
+                        </h3>
+                        
+                        <div class="install-step-list">
+                            <div class="install-step">
+                                <div class="step-num">1</div>
+                                <div class="step-text">
+                                    <strong>Download Digital_Tasbih.apk</strong>
+                                    <p>Tap download to save the Android package to your device.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">2</div>
+                                <div class="step-text">
+                                    <strong>Install Directly</strong>
+                                    <p>Open the download notification and confirm installation.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">3</div>
+                                <div class="step-text">
+                                    <strong>Begin Counting</strong>
+                                    <p>Launch the app and tap anywhere on the screen to begin your daily Ibadat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="app-cta-banner">
+            <h3>Focus on Your Ibadat Without Distractions</h3>
+            <p>Download Digital Tasbih now for a clean, respectful, and battery-friendly counting experience.</p>
+            <div class="app-cta-buttons">
+                <a href="APKs/Digi%20Tasbih.apk" download="Digital_Tasbih.apk" class="btn-primary">
+                    <i class="fa-solid fa-download"></i> Download Digital Tasbih APK (16.0 MB)
+                </a>
+                <a href="index.html#works" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Explore Other Apps
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
+        <div class="footer-links">
+            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navixo | Real-Time Location Sharing App by Wasif Khan</title>
+    
+    <meta name="description" content="Navixo is a modern, privacy-focused real-time location sharing Android app built with Kotlin, Jetpack Compose, and OpenStreetMap.">
+    <meta name="author" content="Wasif Khan">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Navixo | Real-Time Location Sharing App">
+    <meta property="og:description" content="Private, battery-efficient real-time location sharing and circle safety for Android. Built with Kotlin, Jetpack Compose, and OpenStreetMap.">
+    <meta property="og:image" content="Images/Navixo_logo.webp">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='45' fill='white'>WK</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
+        <div class="header-right">
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#works" class="active">Works</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="app-detail-header">
+            <a href="index.html#works" class="breadcrumb-nav">
+                <i class="fa-solid fa-arrow-left"></i> Back to Works
+            </a>
+
+            <!-- App Hero Card -->
+            <div class="app-hero-card">
+                <img src="Images/Navixo_logo.webp" alt="Navixo Application Icon" class="app-hero-logo" width="96" height="96">
+                
+                <div class="app-hero-info">
+                    <h1>Navixo</h1>
+                    <p class="app-tagline">Real-Time Location Sharing & Family Safety Companion</p>
+                    
+                    <div class="app-badge-row">
+                        <span class="badge-pill accent"><i class="fa-solid fa-code-commit"></i> v1.0.0</span>
+                        <span class="badge-pill success"><i class="fa-solid fa-shield-halved"></i> Privacy First</span>
+                        <span class="badge-pill"><i class="fa-solid fa-calendar-day"></i> Oct 2026</span>
+                        <span class="badge-pill"><i class="fa-brands fa-android"></i> Android 8.0+</span>
+                    </div>
+                </div>
+
+                <div class="app-hero-actions">
+                    <a href="APKs/Navixo.apk" download="Navixo.apk" class="btn-primary">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
+                    <span class="direct-apk-note">
+                        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> 23.3 MB &bull; Signed & Safe
+                    </span>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="app-metrics-bar">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="metric-content">
+                        <small>Time to Build</small>
+                        <strong>3 to 4 Weeks</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="metric-content">
+                        <small>UI Framework</small>
+                        <strong>Jetpack Compose</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="metric-content">
+                        <small>Mapping Engine</small>
+                        <strong>OpenStreetMap</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-box-archive"></i></div>
+                    <div class="metric-content">
+                        <small>Package Size</small>
+                        <strong>23.3 MB APK</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Body Layout -->
+            <div class="app-body-layout">
+                <div class="app-content-column">
+                    <!-- About Section -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-circle-info"></i> About Navixo
+                        </h2>
+                        <p class="section-paragraph">
+                        Navixo, developed by Wasif Ahmed Khan, is a secure, privacy-focused live location-sharing Android application designed for families and close friends. Built to be completely free to operate, the app provides users with granular control over their location data through time-limited sharing options and customizable battery-saver GPS intervals. Its standout feature is "Incognito Mode," which allows users to freeze their broadcasted location at a designated safe zone, ensuring personal privacy without causing worry for their loved ones.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Screenshots / Device Previews -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
+                        </h2>
+
+                        <div class="screenshot-gallery">
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Navixo/NavixoSS1.webp" alt="Navixo Live Map Tracking Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Login Page</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Navixo/NavixoSS2.webp" alt="Navixo People Hub Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Map View</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Navixo/NavixoSS3.webp" alt="Navixo Incognito Privacy Screenshot" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">People List</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Technologies Used -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-layer-group"></i> Frameworks & Technologies
+                        </h2>
+                        <p class="section-paragraph">
+                            Engineered with clean architectural separation and modern native Android Jetpack libraries:
+                        </p>
+
+                        <div class="tech-stack-grid">
+                            <div class="tech-card">
+                                <i class="fa-brands fa-android tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Kotlin</strong>
+                                    <small>Core language utilizing Coroutines & Flow for reactive asynchronous streams.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-cubes tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Jetpack Compose</strong>
+                                    <small>Declarative UI architecture with Material 3 styling and responsive view rendering.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-map-marked-alt tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Osmdroid (OpenStreetMap)</strong>
+                                    <small>Open-source, privacy-preserving interactive map rendering with zero vendor lock-in.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-gears tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Foreground Service</strong>
+                                    <small>Persistent background location dispatcher with notification-level control.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-diagram-project tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>MVVM Architecture</strong>
+                                    <small>ViewModel, Repository pattern, and clean UI state separation for testability.</small>
+                                </div>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fa-solid fa-shield-virus tech-card-icon"></i>
+                                <div class="tech-card-info">
+                                    <strong>Local Credentials</strong>
+                                    <small>Encrypted local preferences for session authentication and privacy presets.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-star"></i> Core Features
+                        </h2>
+                        
+                        <div class="features-grid">
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                                <h4>Real-Time Coordination</h4>
+                                <p>Smooth GPS coordinate streaming that keeps circle members updated on current location and travel heading.</p>
+                            </div>
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-user-shield"></i></div>
+                                <h4>Incognito & Ghost Mode</h4>
+                                <p>Fuzz your location radius or pause updates with a single tap whenever you need personal privacy.</p>
+                            </div>
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                                <h4>Timed Sharing Sessions</h4>
+                                <p>Set sharing durations (15m, 1h, 8h) that automatically terminate tracking once the timer expires.</p>
+                            </div>
+                            <div class="feature-box">
+                                <div class="feature-box-icon"><i class="fa-solid fa-battery-three-quarters"></i></div>
+                                <h4>Battery Optimized</h4>
+                                <p>Smart motion-sensor heuristics that adjust GPS polling frequency based on whether you are walking or stationary.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="app-sidebar-column">
+                    <!-- Technical Specs Table -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-sliders"></i> Technical Specs
+                        </h3>
+                        
+                        <div class="specs-table">
+                            <div class="specs-row">
+                                <span class="spec-label">Package Name</span>
+                                <span class="spec-val">com.wasifadev.navixo</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Version</span>
+                                <span class="spec-val">1.0.0 (Build 1)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Package Size</span>
+                                <span class="spec-val">23.3 MB</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Minimum Android</span>
+                                <span class="spec-val">Android 8.0 (API 26)</span>
+                            </div>
+                            <!-- <div class="specs-row">
+                                <span class="spec-label">Target Android</span>
+                                <span class="spec-val">Android 14 / 15 (API 34)</span>
+                            </div> -->
+                            <div class="specs-row">
+                                <span class="spec-label">License</span>
+                                <span class="spec-val">Free Utility</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Developer</span>
+                                <span class="spec-val">Mr. Wasif Ahmed Khan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Installation Guide -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-download"></i> Installation Guide
+                        </h3>
+                        
+                        <div class="install-step-list">
+                            <div class="install-step">
+                                <div class="step-num">1</div>
+                                <div class="step-text">
+                                    <strong>Download Navixo.apk</strong>
+                                    <p>Tap the download button to save the package to your Android device.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">2</div>
+                                <div class="step-text">
+                                    <strong>Allow Unknown Apps</strong>
+                                    <p>If prompted by your browser, tap Settings and allow installation from this source.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">3</div>
+                                <div class="step-text">
+                                    <strong>Install & Grant Location</strong>
+                                    <p>Open the app and grant foreground location permissions to begin sharing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Timeline -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Sprint Timeline
+                        </h3>
+                        <p class="section-paragraph" style="font-size: 0.9rem;">
+                            <strong>Total Development:</strong> ~3 to 4 Weeks<br>
+                            &bull; <strong>Week 1:</strong> Architecture setup & OpenStreetMap integration<br>
+                            &bull; <strong>Week 2:</strong> Foreground Service & GPS streaming pipeline<br>
+                            &bull; <strong>Week 3:</strong> People Hub UI & Duration selector in Jetpack Compose<br>
+                            &bull; <strong>Week 4:</strong> Incognito mode, battery tuning & release APK build
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="app-cta-banner">
+            <h3>Ready to Experience Navixo?</h3>
+            <p>Download the production APK package directly to your phone and start private, battery-friendly location sharing today.</p>
+            <div class="app-cta-buttons">
+                <a href="APKs/Navixo.apk" download="Navixo.apk" class="btn-primary">
+                    <i class="fa-solid fa-download"></i> Download Navixo APK (23.3 MB)
+                </a>
+                <a href="index.html#works" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Explore Other Apps
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
+        <div class="footer-links">
+            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
