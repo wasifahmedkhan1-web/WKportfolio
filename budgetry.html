@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgetry - Budget Tracking Application</title>
+    
+    <meta name="description" content="Budgetry is a student- and employee-focused expense tracking Android app built with Kotlin and Jetpack Compose to manage monthly allowances and fixed bills.">
+    <meta name="author" content="Wasif Khan">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Budgetry - Budget Tracking Application">
+    <meta property="og:description" content="Take control of your allowance. Lock fixed bills upfront, track daily spending limits, and stay guilt-free with Budgetry.">
+    <meta property="og:image" content="Images/Budgetry_logo.webp">
+
+    <link rel="icon" type="image/svg+xml" href="Images/Small_Logos/Budgetry_Logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Small_Logos/Budgetry_logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Small_Logos/Budgetry_Favi.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
+        <div class="header-right">
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#works" class="active">Works</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="app-detail-header">
+            <a href="index.html#works" class="breadcrumb-nav">
+                <i class="fa-solid fa-arrow-left"></i> Back to Works
+            </a>
+
+            <!-- App Hero Card -->
+            <div class="app-hero-card">
+                <img src="Images/Budgetry_logo.webp" alt="Budgetry Application Icon" class="app-hero-logo" width="96" height="96">
+                
+                <div class="app-hero-info">
+                    <h1>Budgetry</h1>
+                    <p class="app-tagline">Budget Tracking Application</p>
+                    
+                    <div class="app-badge-row">
+                        <span class="badge-pill accent"><i class="fa-solid fa-code-commit"></i> v1.0.0</span>
+                        <span class="badge-pill success"><i class="fa-solid fa-shield-halved"></i> Privacy First</span>
+                        <span class="badge-pill"><i class="fa-solid fa-calendar-day"></i> Oct 2026</span>
+                        <span class="badge-pill"><i class="fa-brands fa-android"></i> Android 8.0+</span>
+                    </div>
+                </div>
+
+                <div class="app-hero-actions">
+                    <a href="APKs/Budgetry.apk" download="Budgetry.apk" class="btn-primary">
+                        <i class="fa-solid fa-download"></i> Download APK
+                    </a>
+                    <span class="direct-apk-note">
+                        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> 19.6 MB &bull; Signed & Safe
+                    </span>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="app-metrics-bar">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="metric-content">
+                        <small>Time to Build</small>
+                        <strong>2 Weeks</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="metric-content">
+                        <small>UI Framework</small>
+                        <strong>Jetpack Compose</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-box-archive"></i></div>
+                    <div class="metric-content">
+                        <small>Package Size</small>
+                        <strong>19.6 MB</strong>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="metric-content">
+                        <small>Target Audience</small>
+                        <strong>Student & Employees</strong>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- App Body Layout -->
+            <div class="app-body-layout">
+                <div class="app-content-column">
+                    <!-- About Section -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-circle-info"></i> About Budgetry
+                        </h2>
+                        <p class="section-paragraph">
+                        Budgetry is a smart, student- and youth-focused expense tracker designed to simplify personal finance in India. Effortlessly manage your monthly allowance, lock away recurring fixed bills upfront (like rent, PG, or mess fees), and track your "Safe-to-Spend" daily balance so you never accidentally overspend.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Screenshots / Device Previews -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
+                        </h2>
+
+                        <div class="screenshot-gallery">
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Budgetry/BudgetrySS1.webp" alt="Budgetry Profile Setup Screen" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Profile Set Up</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Budgetry/BudgetrySS2.webp" alt="Budgetry Welcome Screen" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Welcome Page</div>
+                            </div>
+
+                            <div class="mockup-phone">
+                                <div class="phone-screen">
+                                    <img src="Screenshots/Budgetry/BudgetrySS3.webp" alt="Budgetry Home Dashboard Screen" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 18px;" loading="lazy">
+                                </div>
+                                <div class="phone-caption">Home</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Key Features -->
+                    <div class="section-block">
+                        <h2 class="section-block-title">
+                            <i class="fa-solid fa-star"></i> Core Features
+                        </h2>
+                        
+                        <div class="features-grid">
+                            <div class="feature-box">
+                                <h4>Allowance & Income Setup</h4>
+                                <p>Configure your monthly income or student allowance with flexible cycle dates to match your exact financial timeline.</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4>Locked Fixed Bills</h4>
+                                <p>Securely lock away recurring fixed expenses like rent, PG, mess, or tuition upfront so that money stays protected from accidental spending.</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4>Safe-to-Spend Balance</h4>
+                                <p>Real-time tracking of your flexible pool and "Safe Today's Limit" calculation to ensure your daily spending stays completely guilt-free and on track.</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4>Expense & History Tracking</h4>
+                                <p>Easily log daily expenses and review your spending pacing to keep your budget safe throughout the entire month cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="app-sidebar-column">
+                    <!-- Technical Specs Table -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-sliders"></i> Technical Specs
+                        </h3>
+                        
+                        <div class="specs-table">
+                            <div class="specs-row">
+                                <span class="spec-label">Package Name</span>
+                                <span class="spec-val">com.wasifadev.budgetry</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Version</span>
+                                <span class="spec-val">1.0.0 (Build 1)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Package Size</span>
+                                <span class="spec-val">19.6 MB</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Minimum Android</span>
+                                <span class="spec-val">Android 8.0 (API 26)</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">License</span>
+                                <span class="spec-val">Free Utility</span>
+                            </div>
+                            <div class="specs-row">
+                                <span class="spec-label">Developer</span>
+                                <span class="spec-val">Mr. Wasif Ahmed Khan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Installation Guide -->
+                    <div class="section-block">
+                        <h3 class="section-block-title" style="font-size: 1.1rem;">
+                            <i class="fa-solid fa-download"></i> Installation Guide
+                        </h3>
+                        
+                        <div class="install-step-list">
+                            <div class="install-step">
+                                <div class="step-num">1</div>
+                                <div class="step-text">
+                                    <strong>Download Budgetry.apk</strong>
+                                    <p>Tap the download button to save the package to your Android device.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">2</div>
+                                <div class="step-text">
+                                    <strong>Allow Unknown Apps</strong>
+                                    <p>If prompted by your browser, tap Settings and allow installation from this source.</p>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <div class="step-num">3</div>
+                                <div class="step-text">
+                                    <strong>Install </strong>
+                                    <p>Open the app and start managing your monthly budget</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="app-cta-banner">
+            <h3>Ready to Experience Budgetry?</h3>
+            <p>Download the production APK package directly to your phone and start managing your daily and monthly budget</p>
+            <div class="app-cta-buttons">
+                <a href="APKs/Budgetry.apk" download="Budgetry.apk" class="btn-primary">
+                    <i class="fa-solid fa-download"></i> Download Budgetry APK (19.6 MB)
+                </a>
+                <a href="index.html#works" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Explore Other Apps
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
+        <div class="footer-links">
+            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
