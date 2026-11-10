@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wasifahmedkhan1-web.github.io/WKportfolio/sitemap.xml

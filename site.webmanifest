@@ -1,0 +1,21 @@
+{
+  "name": "Wasif Khan | Software Engineer & Developer Portfolio",
+  "short_name": "Wasif Khan",
+  "description": "Portfolio of Wasif Khan - Computer Science student & aspiring Software Engineer specializing in Native Android, Python, and Modern Web Development.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#080c14",
+  "theme_color": "#080c14",
+  "icons": [
+    {
+      "src": "Images/Small_Logos/WKLogo_Favi.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "Images/Small_Logos/WK_Logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

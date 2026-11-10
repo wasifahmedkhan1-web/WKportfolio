@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080c14">
     <title>MotoMetrics | Automotive Fuel & EV Analytics App by Wasif Khan</title>
     
+    <link rel="canonical" href="https://wasifahmedkhan1-web.github.io/WKportfolio/motometrics.html">
     <meta name="description" content="MotoMetrics is an intuitive Android companion app built with Kotlin & Jetpack Compose to track vehicle fuel economy, EV battery consumption, and trip expenses.">
     <meta name="author" content="Wasif Khan">
 
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wasifahmedkhan1-web.github.io/WKportfolio/motometrics.html">
     <meta property="og:title" content="MotoMetrics | Automotive Fuel & EV Analytics">
     <meta property="og:description" content="Smart automotive analytics app built to monitor fuel economy, calculate EV charge consumption, and project journey expenses seamlessly.">
-    <meta property="og:image" content="Images/MotoMetrics_logo.webp">
+    <meta property="og:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/MotoMetrics_logo.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MotoMetrics | Automotive Fuel & EV Analytics">
+    <meta name="twitter:description" content="Smart automotive analytics app built to monitor fuel economy, calculate EV charge consumption, and project journey expenses seamlessly.">
+    <meta name="twitter:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/MotoMetrics_logo.webp">
 
     <link rel="icon" type="image/svg+xml" href="Images/Small_Logos/MotoMetrics_logo.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="Images/Small_Logos/MotoMetrics_logo.png">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/Small_Logos/MotoMetrics_Favi.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
+        <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+<header>
         <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
         <div class="header-right">
             <nav id="nav-menu" aria-label="Main Navigation">
@@ -49,7 +61,6 @@
                 <i class="fa-solid fa-arrow-left"></i> Back to Works
             </a>
 
-            <!-- App Hero Card -->
             <div class="app-hero-card">
                 <img src="Images/MotoMetrics_logo.webp" alt="MotoMetrics Application Icon" class="app-hero-logo" width="96" height="96">
                 
@@ -75,7 +86,6 @@
                 </div>
             </div>
 
-            <!-- Key Metrics Bar -->
             <div class="app-metrics-bar">
                 <div class="metric-card">
                     <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
@@ -107,10 +117,9 @@
                 </div>
             </div>
 
-            <!-- App Body Layout -->
             <div class="app-body-layout">
                 <div class="app-content-column">
-                    <!-- About Section -->
+                    
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-circle-info"></i> About MotoMetrics
@@ -120,7 +129,6 @@
                         </p>
                     </div>
 
-                    <!-- Interface Showcase -->
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
@@ -150,7 +158,6 @@
                         </div>
                     </div>
 
-                    <!-- Tech Stack -->
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-layer-group"></i> Frameworks & Technologies
@@ -181,7 +188,6 @@
                         </div>
                     </div>
 
-                    <!-- Core Features -->
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-star"></i> Core Features
@@ -207,9 +213,8 @@
                     </div>
                 </div>
 
-                <!-- Sidebar Column -->
                 <div class="app-sidebar-column">
-                    <!-- Specs Table -->
+                    
                     <div class="section-block">
                         <h3 class="section-block-title" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-sliders"></i> Technical Specs
@@ -243,7 +248,6 @@
                         </div>
                     </div>
 
-                    <!-- Installation Guide -->
                     <div class="section-block">
                         <h3 class="section-block-title" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-download"></i> Installation Guide
@@ -274,7 +278,6 @@
                         </div>
                     </div>
 
-                    <!-- Development Timeline -->
                     <div class="section-block">
                         <h3 class="section-block-title" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-clock-rotate-left"></i> Sprint Timeline
@@ -290,7 +293,6 @@
             </div>
         </div>
 
-        <!-- Call to Action Banner -->
         <div class="app-cta-banner">
             <h3>Take Control of Your Driving Costs</h3>
             <p>Download MotoMetrics now and calculate your fuel mileage, EV battery performance.</p>
@@ -306,13 +308,18 @@
     </main>
 
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+            <circle class="progress-ring-circle" cx="24" cy="24" r="20"></circle>
+        </svg>
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <footer>
         <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
         <div class="footer-links">
-            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+            <a href="privacy.html">Privacy Policy</a> &bull; 
+            <a href="terms.html">Terms</a> &bull; 
+            <span>Build &bull; Learn &bull; Repeat</span>
         </div>
     </footer>
 

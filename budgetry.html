@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budgetry - Budget Tracking Application</title>
+    <meta name="theme-color" content="#080c14">
+    <title>Budgetry - Budget Tracking Application | Wasif Khan</title>
     
+    <link rel="canonical" href="https://wasifahmedkhan1-web.github.io/WKportfolio/budgetry.html">
     <meta name="description" content="Budgetry is a student- and employee-focused expense tracking Android app built with Kotlin and Jetpack Compose to manage monthly allowances and fixed bills.">
     <meta name="author" content="Wasif Khan">
 
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wasifahmedkhan1-web.github.io/WKportfolio/budgetry.html">
     <meta property="og:title" content="Budgetry - Budget Tracking Application">
     <meta property="og:description" content="Take control of your allowance. Lock fixed bills upfront, track daily spending limits, and stay guilt-free with Budgetry.">
-    <meta property="og:image" content="Images/Budgetry_logo.webp">
+    <meta property="og:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/Budgetry_logo.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Budgetry - Budget Tracking Application">
+    <meta name="twitter:description" content="Take control of your allowance. Lock fixed bills upfront, track daily spending limits, and stay guilt-free with Budgetry.">
+    <meta name="twitter:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/Budgetry_logo.webp">
 
     <link rel="icon" type="image/svg+xml" href="Images/Small_Logos/Budgetry_Logo.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="Images/Small_Logos/Budgetry_logo.png">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/Small_Logos/Budgetry_Favi.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
+        <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+<header>
         <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
         <div class="header-right">
             <nav id="nav-menu" aria-label="Main Navigation">
@@ -49,7 +61,6 @@
                 <i class="fa-solid fa-arrow-left"></i> Back to Works
             </a>
 
-            <!-- App Hero Card -->
             <div class="app-hero-card">
                 <img src="Images/Budgetry_logo.webp" alt="Budgetry Application Icon" class="app-hero-logo" width="96" height="96">
                 
@@ -75,7 +86,6 @@
                 </div>
             </div>
 
-            <!-- Key Metrics Bar -->
             <div class="app-metrics-bar">
                 <div class="metric-card">
                     <div class="metric-icon"><i class="fa-solid fa-stopwatch"></i></div>
@@ -107,10 +117,9 @@
                 </div>
             </div>
 
-            <!-- App Body Layout -->
             <div class="app-body-layout">
                 <div class="app-content-column">
-                    <!-- About Section -->
+                    
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-circle-info"></i> About Budgetry
@@ -120,7 +129,6 @@
                         </p>
                     </div>
 
-                    <!-- Interactive Screenshots / Device Previews -->
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-mobile-screen-button"></i> App Screenshot
@@ -150,8 +158,6 @@
                         </div>
                     </div>
 
-
-                    <!-- Key Features -->
                     <div class="section-block">
                         <h2 class="section-block-title">
                             <i class="fa-solid fa-star"></i> Core Features
@@ -178,9 +184,8 @@
                     </div>
                 </div>
 
-                <!-- Sidebar Column -->
                 <div class="app-sidebar-column">
-                    <!-- Technical Specs Table -->
+                    
                     <div class="section-block">
                         <h3 class="section-block-title" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-sliders"></i> Technical Specs
@@ -214,7 +219,6 @@
                         </div>
                     </div>
 
-                    <!-- Installation Guide -->
                     <div class="section-block">
                         <h3 class="section-block-title" style="font-size: 1.1rem;">
                             <i class="fa-solid fa-download"></i> Installation Guide
@@ -249,7 +253,6 @@
             </div>
         </div>
 
-        <!-- Call to Action Banner -->
         <div class="app-cta-banner">
             <h3>Ready to Experience Budgetry?</h3>
             <p>Download the production APK package directly to your phone and start managing your daily and monthly budget</p>
@@ -265,13 +268,18 @@
     </main>
 
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+            <circle class="progress-ring-circle" cx="24" cy="24" r="20"></circle>
+        </svg>
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <footer>
         <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
         <div class="footer-links">
-            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+            <a href="privacy.html">Privacy Policy</a> &bull; 
+            <a href="terms.html">Terms</a> &bull; 
+            <span>Build &bull; Learn &bull; Repeat</span>
         </div>
     </footer>
 

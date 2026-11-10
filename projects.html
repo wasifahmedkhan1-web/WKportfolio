@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080c14">
     <title>Projects & Works | Wasif Khan</title>
     
-    <meta name="description" content="Explore web applications, Android packages, Python utilities, and C++ algorithms built by Wasif Khan.">
+    <link rel="canonical" href="https://wasifahmedkhan1-web.github.io/WKportfolio/projects.html">
+    <meta name="description" content="Explore native Android packages, web applications, and Python utilities built by Wasif Khan.">
     <meta name="author" content="Wasif Khan">
 
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wasifahmedkhan1-web.github.io/WKportfolio/projects.html">
     <meta property="og:title" content="Projects & Works | Wasif Khan">
-    <meta property="og:description" content="Explore web applications, Android packages, Python utilities, and C++ algorithms built by Wasif Khan.">
-    <meta property="og:image" content="Images/wasif_FP.webp">
+    <meta property="og:description" content="Explore native Android packages, web applications, and Python utilities built by Wasif Khan.">
+    <meta property="og:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/wasif_FP.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects & Works | Wasif Khan">
+    <meta name="twitter:description" content="Explore native Android packages, web applications, and Python utilities built by Wasif Khan.">
+    <meta name="twitter:image" content="https://wasifahmedkhan1-web.github.io/WKportfolio/Images/wasif_FP.webp">
 
     <link rel="icon" type="image/svg+xml" href="Images/Small_Logos/WK_Logo.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Small_Logos/WK_Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Small_Logos/WKLogo_Favi.png">
     <link rel="apple-touch-icon" sizes="180x180" href="Images/Small_Logos/WKLogo_Favi.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
 
     <header>
         <a href="index.html" class="logo" aria-label="Wasif Khan Portfolio Home">WK</a>
@@ -48,16 +60,13 @@
                 <h2>ENGINEERING & SOFTWARE PROJECTS</h2>
             </div>
 
-            <!-- Category Filter -->
             <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="android">Android</button>
-                <button class="filter-btn" data-filter="python-cpp">Python & C++</button>
                 <button class="filter-btn" data-filter="web">Web Development</button>
             </div>
             
             <div class="works-grid">
-                <!-- Project 3: Digital Tasbih -->
                 <div class="work-card reveal" data-category="android">
                     <div class="card-header">
                         <img src="Images/Digi_Tasbih_logo.webp" alt="Digital Tasbih Logo" class="custom-work-logo" width="48" height="48">
@@ -72,14 +81,16 @@
                         <span class="tag">Android</span>
                     </div>
                     <div class="card-actions">
-                        <a href="digital-tasbih.html" class="btn-primary btn-small">
+                        <button type="button" class="btn-primary btn-small" data-app="tasbih">
+                            <i class="fa-solid fa-eye"></i> Quick View
+                        </button>
+                        <a href="digital-tasbih.html" class="btn-secondary btn-small">
                             <i class="fa-solid fa-arrow-right"></i> App Details
                         </a>
                     </div>
                     <span class="apk-notice"><i class="fa-solid fa-circle-info"></i>Verified safe</span>
                 </div>
 
-                <!-- Project 2: MotoMetrics -->
                 <div class="work-card reveal" data-category="android">
                     <div class="card-header">
                         <img src="Images/MotoMetrics_logo.webp" alt="MotoMetrics Logo" class="custom-work-logo" width="48" height="48">
@@ -94,14 +105,16 @@
                         <span class="tag">Android</span>
                     </div>
                     <div class="card-actions">
-                        <a href="motometrics.html" class="btn-primary btn-small">
+                        <button type="button" class="btn-primary btn-small" data-app="motometrics">
+                            <i class="fa-solid fa-eye"></i> Quick View
+                        </button>
+                        <a href="motometrics.html" class="btn-secondary btn-small">
                             <i class="fa-solid fa-arrow-right"></i> App Details
                         </a>
                     </div>
                     <span class="apk-notice"><i class="fa-solid fa-circle-info"></i>Verified safe</span>
                 </div>
 
-                <!-- Project 1: Navixo -->
                 <div class="work-card reveal" data-category="android">
                     <div class="card-header">
                         <img src="Images/Navixo_logo.webp" alt="Navixo Logo" class="custom-work-logo" width="48" height="48">
@@ -116,14 +129,16 @@
                         <span class="tag">Android</span>
                     </div>
                     <div class="card-actions">
-                        <a href="navixo.html" class="btn-primary btn-small">
+                        <button type="button" class="btn-primary btn-small" data-app="navixo">
+                            <i class="fa-solid fa-eye"></i> Quick View
+                        </button>
+                        <a href="navixo.html" class="btn-secondary btn-small">
                             <i class="fa-solid fa-arrow-right"></i> App Details
                         </a>
                     </div>
                     <span class="apk-notice"><i class="fa-solid fa-circle-info"></i>Verified safe</span>
                 </div>
 
-                <!-- Project 4: Budgetry -->
                 <div class="work-card reveal" data-category="android">
                     <div class="card-header">
                         <img src="Images/Budgetry_logo.webp" alt="Budgetry Logo" class="custom-work-logo" width="48" height="48">
@@ -138,90 +153,16 @@
                         <span class="tag">Android</span>
                     </div>
                     <div class="card-actions">
-                        <a href="budgetry.html" class="btn-primary btn-small">
+                        <button type="button" class="btn-primary btn-small" data-app="budgetry">
+                            <i class="fa-solid fa-eye"></i> Quick View
+                        </button>
+                        <a href="budgetry.html" class="btn-secondary btn-small">
                             <i class="fa-solid fa-arrow-right"></i> App Details
                         </a>
                     </div>
                     <span class="apk-notice"><i class="fa-solid fa-circle-info"></i>Verified safe</span>
                 </div>
 
-
-
-                
-
-                <!-- Media & File Converter
-                <div class="work-card reveal" data-category="python-cpp">
-                    <div class="card-header">
-                        <i class="fa-solid fa-file-export work-icon"></i>
-                        <div class="app-meta">
-                            <span class="version">Utility</span>
-                            <span class="date">Python</span>
-                        </div>
-                    </div>
-                    <h3>Batch Media Converter</h3>
-                    <p>High-efficiency conversion tool built to batch convert, resize, and compress modern image and document formats (WebP, PNG, JPG, PDF) locally.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Pillow</span>
-                        <span class="tag">Automation</span>
-                        <span class="tag">File IO</span>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://github.com/wasifahmedkhan1-web" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-small">
-                            <i class="fa-brands fa-github"></i> View Repository
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Terminal Task Manager
-                <div class="work-card reveal" data-category="python-cpp">
-                    <div class="card-header">
-                        <i class="fa-solid fa-terminal work-icon"></i>
-                        <div class="app-meta">
-                            <span class="version">CLI</span>
-                            <span class="date">Python / SQLite</span>
-                        </div>
-                    </div>
-                    <h3>CLI Task & Habit Engine</h3>
-                    <p>Keyboard-centric terminal utility for software developers to manage sprints, todo queues, and daily habits with persistent SQLite storage.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">SQLite</span>
-                        <span class="tag">CLI</span>
-                        <span class="tag">Productivity</span>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://github.com/wasifahmedkhan1-web" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-small">
-                            <i class="fa-brands fa-github"></i> View Repository
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- C++ Algorithms & DSA
-                <div class="work-card reveal" data-category="python-cpp">
-                    <div class="card-header">
-                        <i class="fa-solid fa-diagram-project work-icon"></i>
-                        <div class="app-meta">
-                            <span class="version">Active</span>
-                            <span class="date">C++ / STL</span>
-                        </div>
-                    </div>
-                    <h3>C++ Algorithms & DSA Lab</h3>
-                    <p>A repository of optimized data structures and competitive programming solutions spanning graphs, dynamic programming, and binary search trees.</p>
-                    <div class="tech-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">STL</span>
-                        <span class="tag">Algorithms</span>
-                        <span class="tag">Problem Solving</span>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://github.com/wasifahmedkhan1-web" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-small">
-                            <i class="fa-brands fa-github"></i> View Repository
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- Transmute -->
                 <div class="work-card reveal" data-category="web">
                     <div class="card-header">
                         <img src="Images/Transmute.webp" alt="Transmute Logo" class="custom-work-logo" width="48" height="48">
@@ -239,13 +180,15 @@
                         <span class="tag">Web Application</span>
                     </div>
                     <div class="card-actions">
-                        <a href="https://wasifahmedkhan1-web.github.io/Transmute" class="btn-primary btn-small">
-                            <i class="fa-solid fa-arrow-right"></i> View Website
+                        <button type="button" class="btn-secondary btn-small" data-app="transmute">
+                            <i class="fa-solid fa-eye"></i> Quick View
+                        </button>
+                        <a href="https://wasifahmedkhan1-web.github.io/Transmute" target="_blank" rel="noopener noreferrer" class="btn-primary btn-small">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open App
                         </a>
                     </div>
                 </div>
 
-                <!-- Personal Portfolio Website -->
                 <div class="work-card reveal" data-category="web">
                     <div class="card-header">
                         <i class="fa-solid fa-code work-icon"></i>
@@ -272,7 +215,6 @@
         </section>
     </main>
 
-    <!-- App Details Modal -->
     <div id="app-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-backdrop"></div>
         <div class="modal-dialog">
@@ -281,15 +223,19 @@
         </div>
     </div>
 
-    <!-- Back to top button -->
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="progress-ring" width="48" height="48" viewBox="0 0 48 48">
+            <circle class="progress-ring-circle" cx="24" cy="24" r="20"></circle>
+        </svg>
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <footer>
         <p>&copy; 2026 Wasif Khan. All rights reserved.</p>
         <div class="footer-links">
-            <span>Build</span> &bull; <span>Learn</span> &bull; <span>Repeat</span>
+            <a href="privacy.html">Privacy Policy</a> &bull; 
+            <a href="terms.html">Terms</a> &bull; 
+            <span>Build &bull; Learn &bull; Repeat</span>
         </div>
     </footer>
 
